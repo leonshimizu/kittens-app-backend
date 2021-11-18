@@ -1,0 +1,11 @@
+### Kittens Index
+GET http://localhost:3000/kittens
+
+### Kittens Create
+POST http://localhost:3000/kittens
+content-type: application/json
+
+{
+  "name": "Mr. Kittens",
+  "age": "10"
+}
