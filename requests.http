@@ -6,6 +6,21 @@ POST http://localhost:3000/kittens
 content-type: application/json
 
 {
-  "name": "Mr. Kittens",
+  "name": "Test",
   "age": "10"
 }
+
+### Kittens Show
+GET http://localhost:3000/kittens/1
+
+### Kittens Update
+PATCH http://localhost:3000/kittens/1
+content-type: application/json
+
+{
+  "name": "Mrs. Kittens",
+  "age": 9
+}
+
+### Kittens Destroy
+DELETE http://localhost:3000/kittens/3

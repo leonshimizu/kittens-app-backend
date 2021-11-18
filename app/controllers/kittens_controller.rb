@@ -13,5 +13,22 @@ class KittensController < ApplicationController
     render json: kitten.as_json
   end
 
-  
+  def show
+    kitten = Kitten.find(params[:id])
+    render json: kitten.as_json
+  end
+
+  def update
+    kitten = Kitten.find(params[:id])
+    kitten.name = params[:name] || kitten.name
+    kitten.age = params[:age] || kitten.age
+    kitten.save
+    render json: kitten.as_json
+  end
+
+  def destroy
+    kitten = Kitten.find(params[:id])
+    kitten.destroy
+    render json: {message: "Successfully deleted Kitten"}
+  end
 end
