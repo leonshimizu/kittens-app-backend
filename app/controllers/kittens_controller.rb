@@ -22,7 +22,7 @@ class KittensController < ApplicationController
   def update
     kitten = Kitten.find(params[:id])
     kitten.name = params[:name] || kitten.name
-    kitten.age = params[:age] || kitten.age,
+    kitten.age = params[:age] || kitten.age
     kitten.image = params[:image] || kitten.image
     kitten.save
     render json: kitten.as_json
